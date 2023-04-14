@@ -17,9 +17,21 @@ const InputLocation = (props) => {
     }
   };
   const getLocationHandler = async () => {
-    const data = await getLocationNFetch();
-    setWeather({ ...data });
+    setWeather({ isLoading: true });
     setShow(true);
+    const successFun = async function (position) {
+      let lon = position.coords.longitude + "";
+      let lat = position.coords.latitude + "";
+      const data = await getLocationNFetch(lat, lon);
+      setWeather({ ...data });
+      setShow(true);
+    };
+    const errorFun = function (error) {
+      console.log(error);
+      setWeather({ err: "error" });
+      setShow(true);
+    };
+    navigator.geolocation.getCurrentPosition(successFun, errorFun);
   };
   return (
     <>

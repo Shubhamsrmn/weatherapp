@@ -12,11 +12,13 @@ export const fetchFun = async function (location) {
     };
   }
 };
-export async function getLocationNFetch() {
+export async function getLocationNFetch(lat, lon) {
   const res = await fetch(
-    "https://api.weatherapi.com/v1/ip.json?key=4ee96dfd14d44dfcb72141708231204&q=auto:ip"
+    `https://api.weatherapi.com/v1/current.json?key=4ee96dfd14d44dfcb72141708231204&q=${lat.slice(
+      0,
+      7
+    )},${lon.slice(0, 7)}&aqi=yes`
   );
-
   const data = await res.json();
-  return fetchFun(data.city);
+  return data;
 }

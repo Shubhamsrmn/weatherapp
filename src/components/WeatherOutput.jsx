@@ -4,8 +4,10 @@ import humidity from "../utils/humidity-svgrepo-com.svg";
 import temperature from "../utils/temperature-svgrepo-com.svg";
 import "./weatherOutput.css";
 import Error from "./Error";
+import Loading from "./Loading";
 const WeatherOutput = (props) => {
-  if (props.weather?.err === "error") {
+  if (props.weather?.isLoading) return <Loading />;
+  else if (props.weather?.err === "error") {
     return <Error />;
   }
   return (
