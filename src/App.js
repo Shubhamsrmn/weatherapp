@@ -1,8 +1,9 @@
+import WeatherInput from "./components/WeatherInput";
 import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>helolos</h1>
+      <WeatherInput />
     </div>
   );
 }

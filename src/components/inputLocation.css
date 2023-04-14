@@ -1,0 +1,33 @@
+input {
+  font-size: 1.6rem;
+  padding: 0.8rem;
+}
+.location_btn {
+  color: white;
+  background: #62cdff;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 500ms all ease-out;
+  border: 1px solid white;
+}
+.location_btn:hover {
+  background-color: white;
+  color: grey;
+  border: 1px solid gray;
+}
+.location_ip {
+  outline: none;
+}
+p {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+p:before,
+p:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid gray;
+  margin: auto;
+}
