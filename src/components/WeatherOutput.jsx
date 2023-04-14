@@ -42,12 +42,3 @@ const WeatherOutput = (props) => {
 };
 
 export default WeatherOutput;
-// {
-//   /* <img src={`${props?.weather?.current?.condition?.icon}`} alt="" />
-//       <span>{props.weather.current.temp_c}</span>
-//       <span>{props.weather.current.condition.text}</span>
-//       <span>
-//         {props.weather.location.name}
-//         {props.weather.location.region}
-//       </span> */
-// }

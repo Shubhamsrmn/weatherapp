@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./inputLocation.css";
-import { fetchFun, getLocationNFetch } from "../fetchData";
+import { fetchFun, getLocationNFetch } from "../utils/fetchData";
 const InputLocation = (props) => {
   const { setShow, setWeather } = props;
   const [input, setInput] = useState("");
