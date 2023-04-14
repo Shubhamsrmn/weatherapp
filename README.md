@@ -23,3 +23,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 the weather app work so the you will enter your city and then press enter key or
 you can detect you location by clicking on get location btn.
 i have used weatherapi.com api which free trial for 14days. which gives weather report by entering city or by detecting ip address.
+link-https://weatherapp-bice.vercel.app/
