@@ -5,7 +5,7 @@ import WeatherOutput from "./WeatherOutput";
 import arrow from "../utils/arrow.svg";
 const WeatherInput = () => {
   const [show, setShow] = useState(false);
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState({}); // the weather data object
   return (
     <div className="app_container">
       <div className="heading_container">

@@ -7,31 +7,31 @@ const InputLocation = (props) => {
   const changeHandler = (el) => {
     setInput(el.target.value);
   };
-  const handler = (el) => {
+  const enterClickHandler = (el) => {
     if (el.key === "Enter") {
       fetchFun(input).then((data) => {
         const temp = { ...data };
-        setWeather(temp);
-        setShow(true);
+        setWeather(temp); // weather data is changing
+        setShow(true); // showing the weather data
       });
     }
   };
   const getLocationHandler = async () => {
-    setWeather({ isLoading: true });
-    setShow(true);
+    setWeather({ isLoading: true }); // weather data is changing
+    setShow(true); // showing the weather data
     const successFun = async function (position) {
       let lon = position.coords.longitude + "";
       let lat = position.coords.latitude + "";
       const data = await getLocationNFetch(lat, lon);
       setWeather({ ...data });
-      setShow(true);
+      setShow(true); // showing the weather data
     };
     const errorFun = function (error) {
       console.log(error);
-      setWeather({ err: "error" });
-      setShow(true);
+      setWeather({ err: "error" }); // weather data is changing
+      setShow(true); // showing the weather data
     };
-    navigator.geolocation.getCurrentPosition(successFun, errorFun);
+    navigator.geolocation.getCurrentPosition(successFun, errorFun); // geolocation for getting latitude and longtide and then fetchng data
   };
   return (
     <>
@@ -42,7 +42,7 @@ const InputLocation = (props) => {
         placeholder="Please Enter City Name"
         value={input}
         onChange={changeHandler}
-        onKeyDown={handler}
+        onKeyDown={enterClickHandler}
       />
       <p>or</p>
       <button className="location_btn" onClick={getLocationHandler}>
