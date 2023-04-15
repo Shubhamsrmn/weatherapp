@@ -1,0 +1,63 @@
+.weather_op_container {
+  width: 360px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  font-size: 2rem;
+}
+.heading-op-container {
+  display: flex;
+  align-self: start;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 1.2rem;
+}
+
+.weather_icon {
+  width: 150px;
+  height: 150px;
+}
+.temperature {
+  font-size: 5rem;
+  font-weight: bolder;
+}
+.icon {
+  padding-right: 2px;
+  width: 32px;
+}
+.locationicon {
+  width: 20px;
+  padding-right: 2px;
+}
+.humidity_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid gray;
+}
+.sub_humidity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+.firstcontainer {
+  border-right: 1px solid gray;
+}
+.sub-text {
+  display: flex;
+  flex-direction: column;
+}
+.text-bold {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.small-text {
+  font-size: 1.4rem;
+}

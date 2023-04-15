@@ -9,6 +9,15 @@ html {
 body {
   font-size: 1.6rem;
 }
+input {
+  outline: none;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1024px) {
   body {
     font-size: 1.4rem;

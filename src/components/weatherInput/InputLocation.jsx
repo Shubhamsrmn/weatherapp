@@ -27,14 +27,13 @@ const InputLocation = (props) => {
       setShow(true); // showing the weather data
     };
     const errorFun = function (error) {
-      console.log(error);
       setWeather({ err: "error" }); // weather data is changing
       setShow(true); // showing the weather data
     };
     navigator.geolocation.getCurrentPosition(successFun, errorFun); // geolocation for getting latitude and longtide and then fetchng data
   };
   return (
-    <>
+    <div className="input_container">
       <input
         className="location_ip"
         type="text"
@@ -48,7 +47,7 @@ const InputLocation = (props) => {
       <button className="location_btn" onClick={getLocationHandler}>
         Get Device Location
       </button>
-    </>
+    </div>
   );
 };
 
